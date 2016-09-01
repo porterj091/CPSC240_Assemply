@@ -1,0 +1,6 @@
+gcc -c -m64 -Wall -l stack4.lis -o stack4.o stack4.c
+gcc -c -m64 -Wall -l stack3.lis -o stack3.o stack3.c
+gcc -c -m64 -Wall -l stack2.lis -o stack2.o stack2.c
+gcc -c -m64 -Wall -l stackdriver.lis -o stackdriver.o stackdriver.c
+nasm -f elf64 -l stackmain.lis -o stackmain.o stackmain.asm
+gcc -m64 -o stack.out stackdriver.o stack2.o stack3.o stack4.o stackmain.o debug.o

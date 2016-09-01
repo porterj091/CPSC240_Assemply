@@ -1,0 +1,8 @@
+*.out
+*.bin
+*.exe
+*.o
+*.lis
+*~
+*.odt
+*.pdf

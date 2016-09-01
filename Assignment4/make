@@ -1,0 +1,7 @@
+nasm -f elf64 -l arraymain.lis -o arraymain.o arraymain.asm
+nasm -f elf64 -l inputarray.lis -o inputarray.o inputarray.asm
+nasm -f elf64 -l outputarray.lis -o outputarray.o outputarray.asm
+nasm -f elf64 -l swaparray.lis -o swaparray.o swaparray.asm
+g++ -c -m64 -Wall -l sortfunction.lis -o sortfunction.o sortfunction.cpp
+g++ -c -m64 -Wall -l arraydriver.lis -o arraydriver.o arraydriver.cpp
+g++ -m64 -o array.out arraydriver.o arraymain.o sortfunction.o inputarray.o outputarray.o swaparray.o
